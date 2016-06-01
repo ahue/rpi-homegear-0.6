@@ -5,6 +5,6 @@ docker run  -ti \
             --name homegear \
             -v /etc/localtime:/etc/localtime:ro \
             -v `pwd`/etc:/opt/homegear/etc \
-            patrickse/rpi-homegear:0.6 bash
+            patrickse/rpi-homegear:0.6
             
             
