@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  homegear:
+    restart: always
+    image: patrickse/rpi-homegear-0.6
+    ports:
+      - 2001:2001
+      - 2002:2002
+      - 2003:2003
+    volumes:
+      - /opt/config/homegear/etc:/opt/homegear/etc
+      - /opt/config/homegear/db.sql:/var/lib/homegear/db.sql
+      - /etc/localtime:/etc/localtime:ro
+    links:
+      - hmcfgusb:hmland
+    privileged: true
+    tty: true

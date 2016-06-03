@@ -13,7 +13,8 @@ if [ "$(ls -A $DIR)" ]; then
     chown homegear.homegear \
         /etc/homegear/dh1024.pem \
         /etc/homegear/homegear.key \
-        /etc/homegear/rpcclients.conf
+        /etc/homegear/rpcclients.conf \
+        /var/lib/homegear/db.sql
     
     sudo -u homegear homegear
 
