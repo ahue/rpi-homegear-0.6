@@ -8,13 +8,13 @@ DIR="/opt/homegear/etc"
 if [ "$(ls -A $DIR)" ]; then
 
     echo "Configs will be copied"
-    cp -R /opt/homegear/etc /etc/homegear
+    cp -R /opt/homegear/etc/* /etc/homegear
     
     chown homegear.homegear \
         /etc/homegear/dh1024.pem \
         /etc/homegear/homegear.key \
         /etc/homegear/rpcclients.conf \
-        /var/lib/homegear/db.sql
+        /var/lib/homegear/db.sql 
     
     sudo -u homegear homegear
 
